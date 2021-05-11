@@ -2,6 +2,12 @@
 
 :root {
     /* css variables go here */
+    --maincolor: rgb(151, 193, 231);
+    --secondarycolor: rgb(3, 99, 189);
+    --tertiarycolor: rgb(186, 151, 231);
+    --accentcolor: rgb(86, 14, 168);
+    --contrastcolor: rgb(43, 43, 46);
+    --highlightcolor: rgb(233, 236, 12);
 }
 
 html {
