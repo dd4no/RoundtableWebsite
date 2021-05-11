@@ -2,6 +2,12 @@
 
 :root {
     /* css variables go here */
+    --maincolor: rgb(151, 193, 231);
+    --secondarycolor: rgb(3, 99, 189);
+    --tertiarycolor: rgb(186, 151, 231);
+    --accentcolor: rgb(113, 73, 158);
+    --contrastcolor: rgb(0, 0, 0);
+    --highlightcolor: rgb(255, 255, 255);
 }
 
 html {
@@ -13,7 +19,7 @@ body {
     height: 100%;
     margin: 0px auto;
     padding-bottom: 50px;
-    background-color: white;
+    background-color: var(--maincolor);
 }
 
 #navbar {
@@ -23,7 +29,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 50px;
-    background-color: grey;  
+    background-color: var(--secondarycolor);  
 }
 
 .nav-link {
@@ -34,12 +40,12 @@ body {
     text-decoration: none;
     font-size: 20px;
     text-align: center;
-    color: white;
+    color: var(--contrastcolor);
 }
 
 .nav-link:hover{
-    background-color: white;
-    color: black;
+    background-color: var(--tertiarycolor);
+    color: var(--contrastcolor);
 }
 
 
@@ -80,9 +86,9 @@ body {
 }
 
 .footer {
-    background-color: grey;
-    color: white;
-    border-top: 2px solid black;
+    background-color: var(--secondarycolor);
+    color: var(--contrastcolor);
+    border-top: 2px solid var(--contrastcolor);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -97,16 +103,16 @@ body {
 #circle {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle at 400px 400px, yellow, rgba(0, 0, 0, 0));
+    background: radial-gradient(circle at 400px 400px, var(--accentcolor), var(--contrastcolor));
     border-radius: 50%;
-    box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 5px 3px var(--tertiarycolor);
     transform: scale(100%);
 }
 
 .title {
     position: absolute;
     font-size: 150px;
-    color: black;
+    color: var(--contrastcolor);
     z-index: 1;
 }
 
@@ -128,10 +134,10 @@ body {
     min-height: 80px;
     width: auto;
     height: auto;
-    border: 1px solid black;
+    border: 1px solid var(--contrastcolor);
     padding: 10px;
     margin: 20px 0;
-    background-color: white;
+    background-color: var(--highlightcolor);
 }
 
 #result-btn, #clear-btn{
