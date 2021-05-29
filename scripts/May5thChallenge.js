@@ -16,8 +16,17 @@ var sentence4 = 'Roundtable Tech The' //true
 var sentence5 = 'the tech roundtable' //true
 
 function validWords(array, string){
-    //code goes here
+    array = array.sort();
+    string = string.toLowerCase().split(" ").sort();
+    return string.length === array.length && string.every((element, index) =>
+        element === array[index].toLowerCase());
 }
 
 //Output to window here:
-document.getElementById("result-box").innerHTML = 'Your answer here'
+document.getElementById("result-box").innerHTML = `Can 'sentence' be constructed from 'array'? <br><br>
+Array: [${words}] <br><br>
+Sentence: ${sentence1} <br> Result: ${validWords(words, sentence1)}</br></br>
+Sentence: ${sentence2} <br> Result: ${validWords(words, sentence2)}</br></br>
+Sentence: ${sentence3} <br> Result: ${validWords(words, sentence3)}</br></br>
+Sentence: ${sentence4} <br> Result: ${validWords(words, sentence4)}</br></br>
+Sentence: ${sentence5} <br> Result: ${validWords(words, sentence5)}`
