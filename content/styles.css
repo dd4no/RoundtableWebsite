@@ -122,6 +122,32 @@ body {
 
 /****** About page ******/
 
+#about-box {
+    margin: 0 auto;
+    margin-top: 10%;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 75%;
+    
+}
+
+#profile-pic {
+    padding: 10px;
+    width: 350px;
+    height: 350px;
+}
+
+#description {
+    padding: 10px;
+}
+
+#desc-title {
+    text-align: center;
+}
+
+.flexbox {
+    display: flex;
+}
 
 /****** Challenge Page ******/
 
@@ -239,3 +265,6 @@ body {
         display: none;
     }
 }
+
+/* About Page */
+
