@@ -1,13 +1,13 @@
 /****** Layout Section ******/
 
 :root {
-    /* css variables go here */
+    /* Site color themes */
     --maincolor: rgb(151, 193, 231);
     --secondarycolor: rgb(3, 99, 189);
     --tertiarycolor: rgb(186, 151, 231);
     --accentcolor: rgb(113, 73, 158);
     --contrastcolor: rgb(0, 0, 0);
-    --highlightcolor: rgb(255, 255, 255);
+    --highlightcolor: gray;
 }
 
 html {
@@ -47,8 +47,6 @@ body {
     background-color: var(--tertiarycolor);
     color: var(--contrastcolor);
 }
-
-
 
 @media screen and (max-width: 365px)
 {
@@ -99,7 +97,10 @@ body {
     text-align: center;
 }
 
+
+
 /****** Index page ******/
+
 #circle {
     width: 500px;
     height: 500px;
@@ -120,6 +121,8 @@ body {
     display: none;
 }
 
+
+
 /****** About page ******/
 
 #about-box {
@@ -127,8 +130,7 @@ body {
     margin-top: 10%;
     border: 2px solid black;
     border-radius: 10px;
-    width: 75%;
-    
+    width: 75%;    
 }
 
 #profile-pic {
@@ -149,87 +151,85 @@ body {
     display: flex;
 }
 
+
+
 /****** Challenge Page ******/
 
+#selector {
+    width: 25%;
+}
+
+#selector h2 {
+    text-align: center;
+}
 
 #options {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     width: 100%;
 }
 
-#file-input {
+.tab-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 50px;
+    background-color: var(--maincolor);
+}
+
+.tab-container button {
+    border: 1px solid var(--maincolor);
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    padding: 14px 16px;
+}
+
+.tab-content {
+    display: none;
+    padding: 15px;
+    border: none;
+    border-top: none;
+    width: 50%;
+    min-height: 300px;
+    height: auto;
+}
+
+.tab-box {
     margin: 20px 0;
+    border: 1px solid var(--contrastcolor);
+    padding: 10px;
+    min-width: 200px;
+    min-height: 125px;
+    width: auto;
+    height: auto;
+    background-color: var(--maincolor);    
+}
+
+#code-box{
+    background-color: black;
+    color: lime;
 }
 
 #result-box {
-    min-width: 200px;
-    min-height: 80px;
-    width: auto;
-    height: auto;
-    border: 1px solid var(--contrastcolor);
-    padding: 10px;
-    margin: 20px 0;
-    background-color: var(--highlightcolor);
+    background-color: white;
 }
 
-#result-btn, #clear-btn{
+#clear-btn{
     margin: 10px 0;
     width: 100px;
     height: 30px;
     padding: 2px;
     border-radius: 7px;
-}
-
-#result-btn {
-    background-color: green;
-}
-
-#clear-btn {
-    background-color: red;
-}
-
-#result-btn:hover {
-    background-color: rgb(0, 95, 0);
-    color: white;
+    background-color: var(--accentcolor);
 }
 
 #clear-btn:hover {
-    background-color: rgb(165, 1, 1);
+    background-color: var(--tertiarycolor);
     color: white;
 }
 
-.tab {
-    overflow: hidden;
-    border: 1px solid white;
-    background-color: yellow;
-}
 
-.tab button {
-    border-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-}
 
-.tab button:hover {
-    background-color: #ddd;
-}
-
-.tab button.active {
-    background-color: white;
-}
-
-.tab-content {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid white;
-    border-top: none;
-    width: 30%;
-    height: 20%;
-}
 /****** Media Queries ******/
 
 /*Medium Screen Size*/
@@ -303,6 +303,3 @@ body {
         display: none;
     }
 }
-
-/* About Page */
-

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,56 +8,60 @@
     <link rel="stylesheet" type="text/css" href="content/styles.css" />
     <title>Roundtable</title>
   </head>
+
   <body>
+
     <!-- Navbar -->
     <div id="navbar">
       <a class="nav-link" href="index.html">Home</a>
-
       <a class="nav-link" href="about.html">About</a>
-
       <a class="nav-link" href="challenge.html">Challenge</a>
     </div>
+
     <!-- Main -->
     <div class="main ">
 
       <div id="selector">
         <h2>Select Challenge:</h2>
-        <select onchange="selectChallenge()" id="options">
+        <select id="options" onchange="selectChallenge()">
           <option>-- Select Date --</option>
           <option>May5thChallenge</option>
           <option>May12thChallenge</option>
           <option>May19thChallenge</option>
-    
+          <option>May26thChallenge</option>    
         </select>
       </div>
       
-      <div class="tab">
-        <button class="tab-links" onclick="openTab(event, 'Instructions')" id="defaultTab">Instructions</button>
-        <button class="tab-links" onclick="openTab(event, 'Code')">Code</button>
-        <button class="tab-links" onclick="openTab(event, 'Output')">Output</button>
+      <div class="tab-container">
+        <button class="tab" id="Instructions-tab" onclick="openTab('Instructions-container', 'Instructions-tab')">Instructions</button>
+        <button class="tab" id="Code-tab" onclick="openTab('Code-container', 'Code-tab')">Code</button>
+        <button class="tab" id="Output-tab" onclick="openTab('Output-container', 'Output-tab')">Output</button>
       </div>
 
-      <div id="Instructions" class="tab-content">
+      <div class="tab-content" id="Instructions-container">
         <h3>Instructions</h3>
+        <div class="tab-box" id="instructions-box"></div>
       </div>
 
-      <div id="Code" class="tab-content">
+      <div class="tab-content" id="Code-container">
         <h3>Code</h3>
+        <div class="tab-box" id="code-box"></div>
       </div>
 
-      <div id="Output" class="tab-content">
+      <div class="tab-content" id="Output-container">
         <h3>Output</h3>
-        <div id="result-box"></div>
+        <div class="tab-box" id="result-box"></div>
         <button type="button" id="clear-btn" onclick="clearResult()">Clear</button>
       </div>
+
     </div>
 
     <!-- Footer -->
     <footer class="footer">&copy;Roundtable 2021</footer>
-    <!-- <script id="challenge-script" src=""></script> -->
+    
   </body>
 
   <script src="scripts/main.js"></script>
-  <script>document.getElementById("defaultTab").click();</script>
+  <script>document.getElementById("Instructions-tab").click();</script>
 
 </html>
