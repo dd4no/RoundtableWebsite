@@ -151,6 +151,12 @@ body {
 
 /****** Challenge Page ******/
 
+
+#options {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
 #file-input {
     margin: 20px 0;
 }
@@ -192,6 +198,38 @@ body {
     color: white;
 }
 
+.tab {
+    overflow: hidden;
+    border: 1px solid white;
+    background-color: yellow;
+}
+
+.tab button {
+    border-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid white;
+    border-top: none;
+    width: 30%;
+    height: 20%;
+}
 /****** Media Queries ******/
 
 /*Medium Screen Size*/
