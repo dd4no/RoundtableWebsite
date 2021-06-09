@@ -1,4 +1,4 @@
-// Write a function that takes a two-digit number and determines if it's the largest of two possible digit swaps.
+let rules = "Write a function that takes a two-digit number and determines if it's the largest of two possible digit swaps."
 
 //  For Example:
 //  largestSwap(27) ==> false
@@ -16,6 +16,7 @@ return num > result;
 //console.log(largestSwap(43));
 
 //Output to window here:
+document.getElementById("instructions-box").innerHTML = rules;
 document.getElementById("result-box").innerHTML =
 `Swap the digits of a two digit number.<br>
 Is the original number larger than the swapped number?<br>
