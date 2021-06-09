@@ -1,6 +1,4 @@
-// Your goal is to write a function that will receive an array of strings as its 
-// argument and returns an array of strings each representing the longest substring
-// of contiguous vowels  ( aeiouAEIOU ).
+let rules = "Write a function that will receive an array of strings as its argument <br> and return an array of strings <br> each representing the longest substring of contiguous vowels ( aeiouAEIOU )."
 
 // For example:
 var str1 = "what a beautiful day today"
@@ -27,4 +25,5 @@ contiguousVowels(strArray)
 
 
 // Output to window here:
+document.getElementById('instructions-box').innerHTML = rules;
 document.getElementById("result-box").innerHTML = `[${contiguousVowels(strArray)}]`;
