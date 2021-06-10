@@ -2,13 +2,16 @@ rules = `Write a function that will receive an array of strings as its argument 
 and return an array of strings <br> 
 each representing the longest substring of contiguous vowels ( aeiouAEIOU ).`
 
-// For example:
-var str1 = "what a beautiful day today"
-var str2 = "it's okay, but very breezy"
+examples = `"what a beautiful day today" => contiguous vowel substring: eau<br>
+    "it's ok, but very breezy" => contiguous vowel substring: ee`
 
-var strArray = [str1, str2]
+// Strings
+let str1 = "I have no idea what to say.";    
+let str2 = "Maybe something with a lot of contiguous vowels in it.";
+let str3 = "It's tough to express yourself extemporaneously.";
 
-// contiguousVowels(strArray) ==> ['eau', 'ee']  
+// Array of strings
+let strArray = [str1, str2, str3]
 
 function contiguousVowels(strArr) {
     var result = []
@@ -23,9 +26,11 @@ function contiguousVowels(strArr) {
     return result;
 }
 
-contiguousVowels(strArray)
-
-
-// Output to window here:
+// Output
 document.getElementById('instructions-box').innerHTML = rules;
-document.getElementById("result-box").innerHTML = `[${contiguousVowels(strArray)}]`;
+document.getElementById('examples-box').innerHTML = examples;
+document.getElementById("result-box").innerHTML = `
+${str1}<br>
+${str2}<br>
+${str3}<br><br>
+contiguous vowel substrings --> [${contiguousVowels(strArray)}]`;

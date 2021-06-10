@@ -1,15 +1,15 @@
-//Challenge
 rules = `Given a sequence of valid words as a string, <br>
  test if the string is made up by one or more of the words from the array.`
 
-examples = `var words = ['The', 'Tech', 'Roundtable']<br><br>
+examples = `words = ['The', 'Tech', 'Roundtable']<br><br>
  'The Tech Roundtable' = true<br>
  'The Tech Roundtables' = false<br>
  'A Tech Roundtable' = false<br>`
 
+// Words
 let words = ['The', 'Tech', 'Roundtable']
 
-//test cases:
+// Test cases:
 let sentence1 = 'The Tech Roundtable' //true
 let sentence2 = 'The Tech Roundtables'//false
 let sentence3 = 'A Tech Roundtable'   //false
@@ -23,7 +23,7 @@ function validWords(array, string){
         element === array[index].toLowerCase());
 }
 
-//Output to window here:
+// Output
 document.getElementById("instructions-box").innerHTML = rules;
 document.getElementById("examples-box").innerHTML = examples;
 document.getElementById("result-box").innerHTML = `Can 'sentence' be constructed from 'array'? <br><br>
