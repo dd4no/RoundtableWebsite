@@ -23,6 +23,7 @@ function clearResult() {
     // clear the output of the coding challenge from the UI
     document.getElementById('instructions-box').innerHTML = '';
     document.getElementById('result-box').innerHTML = '';
+    document.getElementById('examples-box').innerHTML = '';
     document.getElementById('options').value = "-- Select Date --";
     let newScriptTag = document.getElementById('challenge-script').remove();
 }
