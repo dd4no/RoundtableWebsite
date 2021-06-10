@@ -4,6 +4,9 @@
 
 //*****Challenge Page code*****//
 
+// Set global variables for instructions and examples
+let rules, examples;
+
 // dynamically load script tag into head tag based on option selected from dropdown
 function selectChallenge() {
     var file = document.getElementById('options').value;
@@ -34,8 +37,10 @@ function openTab(tabContainer, tabName){
     let tabNames = document.getElementsByClassName("tab");
     for (let j=0; j<tabNames.length; j++){
         tabNames[j].style.backgroundColor = "var(--secondarycolor)";
+        tabNames[j].style.fontWeight = "normal"
     }
-    document.getElementById(tabName).style.backgroundColor = "var(--highlightcolor)"
-    document.getElementById(tabContainer).style.backgroundColor = "var(--highlightcolor)"
+    document.getElementById(tabName).style.backgroundColor = "var(--highlightcolor)";
+    document.getElementById(tabName).style.fontWeight = "bold";
+    document.getElementById(tabContainer).style.backgroundColor = "var(--highlightcolor)";
 
 }

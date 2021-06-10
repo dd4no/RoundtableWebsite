@@ -1,14 +1,20 @@
-//Challenge
-let rules = "Given a sequence of valid words as a string, <br> test if the string is made up by one or more of the words from the array."
+rules = `Given a sequence of valid words as a string, <br>
+ test if the string is made up by one or more of the words from the array.`
 
-var words = ['The', 'Tech', 'Roundtable']
+examples = `words = ['The', 'Tech', 'Roundtable']<br><br>
+ 'The Tech Roundtable' = true<br>
+ 'The Tech Roundtables' = false<br>
+ 'A Tech Roundtable' = false<br>`
 
-//test cases:
-var sentence1 = 'The Tech Roundtable' //true
-var sentence2 = 'The Tech Roundtables'//false
-var sentence3 = 'A Tech Roundtable'   //false
-var sentence4 = 'Roundtable Tech The' //true
-var sentence5 = 'the tech roundtable' //true
+// Words
+let words = ['The', 'Tech', 'Roundtable']
+
+// Test cases:
+let sentence1 = 'The Tech Roundtable' //true
+let sentence2 = 'The Tech Roundtables'//false
+let sentence3 = 'A Tech Roundtable'   //false
+let sentence4 = 'Roundtable Tech The' //true
+let sentence5 = 'the tech roundtable' //true
 
 function validWords(array, string){
     array = array.sort();
@@ -17,8 +23,9 @@ function validWords(array, string){
         element === array[index].toLowerCase());
 }
 
-//Output to window here:
+// Output
 document.getElementById("instructions-box").innerHTML = rules;
+document.getElementById("examples-box").innerHTML = examples;
 document.getElementById("result-box").innerHTML = `Can 'sentence' be constructed from 'array'? <br><br>
 Array: [${words}] <br><br>
 Sentence: ${sentence1} <br> Result: ${validWords(words, sentence1)}</br></br>
