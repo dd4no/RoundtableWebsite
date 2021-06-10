@@ -37,8 +37,10 @@ function openTab(tabContainer, tabName){
     let tabNames = document.getElementsByClassName("tab");
     for (let j=0; j<tabNames.length; j++){
         tabNames[j].style.backgroundColor = "var(--secondarycolor)";
+        tabNames[j].style.fontWeight = "normal"
     }
-    document.getElementById(tabName).style.backgroundColor = "var(--highlightcolor)"
-    document.getElementById(tabContainer).style.backgroundColor = "var(--highlightcolor)"
+    document.getElementById(tabName).style.backgroundColor = "var(--highlightcolor)";
+    document.getElementById(tabName).style.fontWeight = "bold";
+    document.getElementById(tabContainer).style.backgroundColor = "var(--highlightcolor)";
 
 }
