@@ -1,4 +1,6 @@
-let rules = "Write a function that will receive an array of strings as its argument <br> and return an array of strings <br> each representing the longest substring of contiguous vowels ( aeiouAEIOU )."
+rules = `Write a function that will receive an array of strings as its argument <br> 
+and return an array of strings <br> 
+each representing the longest substring of contiguous vowels ( aeiouAEIOU ).`
 
 // For example:
 var str1 = "what a beautiful day today"

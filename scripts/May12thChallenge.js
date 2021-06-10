@@ -1,4 +1,5 @@
-let rules = "Implement a function that adds two numbers together and returns the sum in binary.<br> The conversion can occur either before or after the calculation."
+rules = `Implement a function that adds two numbers together and returns the sum in binary.<br>
+ The conversion can occur either before or after the calculation.`
 
 function addNumbers(num1, num2){
     let result = num1 + num2;
