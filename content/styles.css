@@ -1,4 +1,4 @@
-/****** Layout Section ******/
+/****** Sitewide Styles ******/
 
 :root {
     /* Site color themes */
@@ -46,31 +46,6 @@ body {
 .nav-link:hover{
     background-color: var(--tertiarycolor);
     color: var(--contrastcolor);
-}
-
-@media screen and (max-width: 365px)
-{
-    #navbar {
-        transition: .2s ease-out;
-        transition-property: height;
-        height: 150px;
-    }
-}
-
-@media screen and (min-width: 365px)
-{
-    #navbar {
-        transition: .2s ease-out;
-        transition-property: height;
-        height: 50px;
-    }
-}
-
-@media screen and (max-width: 365px)
-{
-    .nav-link {
-        width: 100%;
-    }
 }
 
 .main {
@@ -134,6 +109,7 @@ body {
 }
 
 #profile-pic {
+    margin: 0 auto;
     padding: 10px;
     width: 350px;
     height: 350px;
@@ -141,6 +117,7 @@ body {
 
 #description {
     padding: 10px;
+    float: left;
 }
 
 #desc-title {
@@ -148,7 +125,7 @@ body {
 }
 
 .flexbox {
-    display: flex;
+    display: flex;    
 }
 
 
@@ -236,7 +213,48 @@ body {
 
 /****** Media Queries ******/
 
-/*Medium Screen Size*/
+/* Make Nav Bar vertical on small screens */
+@media screen and (max-width: 365px)
+{
+    #navbar {
+        transition: .2s ease-out;
+        transition-property: height;
+        height: 150px;
+    }
+}
+@media screen and (max-width: 365px)
+{
+    .nav-link {
+        width: 100%;
+    }
+}
+
+/* Reduce Index title size and hide title graphic on small screens */
+@media screen and (max-width: 480px)
+{
+    #circle {
+        display: none;
+    } 
+
+     #hidden-title, #hidden-title h1 {
+        text-align: center; 
+        display: block;
+        font-size: 150px;
+        margin: 0 auto;
+    }    
+
+    #hidden-title p{
+        font-size: 30px;
+        font-variant: small-caps;
+        margin: 0 auto;
+    }
+
+    .title {
+        display: none;
+    } 
+}
+
+/* Change Index title and title graphic size on medium screens */
 @media screen and (min-width: 800px)
 {
     #circle {
@@ -252,7 +270,6 @@ body {
         transition-property: font-size;
     }
 }
-
 @media screen and (max-width: 800px)
 {
     #circle {
@@ -269,41 +286,29 @@ body {
     }
 }
 
-/*Small Screen Size*/
-@media screen and (min-width: 435px)
+/* Set Challenge container size on small screens */
+@media screen and (max-width: 480px) 
 {
-    #circle {
-        display: flex;
-        transition: .2s ease-out;
-        transition-property: display;
+    .tab-content {
+       margin: 0 auto;
+       width: 300px;
     }
 }
 
-@media screen and (max-width: 435px)
+/* Move About text to column on small screens */
+@media screen and (max-width: 1000px)
 {
-    .main {
-        padding: 0;
-        background: linear-gradient(to bottom, white 0%, yellow 100%);
+    .flexbox {
+    flex-direction: column;
     }
-    
-    #circle {
-        display: none;
-    }
+}
 
-    #hidden-title, #hidden-title h1 {
-        text-align: center; 
-        display: block;
-        font-size: 150px;
-        margin: 0 auto;
-    }    
-
-    #hidden-title p{
-        font-size: 30px;
-        font-variant: small-caps;
-        margin: 0 auto;
-    }
-
-    .title {
-        display: none;
+/* Reduce profile image size on small screens */
+@media screen and (max-width: 500px)
+{
+    #profile-pic {     
+        width: 200px;
+        height: 200px;
+        float: none;
     }
 }
