@@ -109,6 +109,7 @@ body {
 }
 
 #profile-pic {
+    margin: 0 auto;
     padding: 10px;
     width: 350px;
     height: 350px;
@@ -116,6 +117,7 @@ body {
 
 #description {
     padding: 10px;
+    float: left;
 }
 
 #desc-title {
@@ -123,7 +125,7 @@ body {
 }
 
 .flexbox {
-    display: flex;
+    display: flex;    
 }
 
 
@@ -227,7 +229,7 @@ body {
     }
 }
 
-/* Reduce title size and hide title graphic on small screens */
+/* Reduce Index title size and hide title graphic on small screens */
 @media screen and (max-width: 480px)
 {
     #circle {
@@ -252,7 +254,7 @@ body {
     } 
 }
 
-/* Change title and title graphic size on medium screens */
+/* Change Index title and title graphic size on medium screens */
 @media screen and (min-width: 800px)
 {
     #circle {
@@ -284,12 +286,29 @@ body {
     }
 }
 
+/* Set Challenge container size on small screens */
 @media screen and (max-width: 480px) 
 {
-
     .tab-content {
        margin: 0 auto;
        width: 300px;
+    }
+}
 
+/* Move About text to column on small screens */
+@media screen and (max-width: 1000px)
+{
+    .flexbox {
+    flex-direction: column;
+    }
+}
+
+/* Reduce profile image size on small screens */
+@media screen and (max-width: 500px)
+{
+    #profile-pic {     
+        width: 200px;
+        height: 200px;
+        float: none;
     }
 }
