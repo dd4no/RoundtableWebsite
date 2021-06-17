@@ -283,3 +283,13 @@ body {
         transition-property: font-size;
     }
 }
+
+@media screen and (max-width: 480px) 
+{
+
+    .tab-content {
+       margin: 0 auto;
+       width: 300px;
+
+    }
+}
