@@ -1,4 +1,4 @@
-/****** Layout Section ******/
+/****** Sitewide Styles ******/
 
 :root {
     /* Site color themes */
@@ -48,31 +48,6 @@ body {
     color: var(--contrastcolor);
 }
 
-@media screen and (max-width: 365px)
-{
-    #navbar {
-        transition: .2s ease-out;
-        transition-property: height;
-        height: 150px;
-    }
-}
-
-@media screen and (min-width: 365px)
-{
-    #navbar {
-        transition: .2s ease-out;
-        transition-property: height;
-        height: 50px;
-    }
-}
-
-@media screen and (max-width: 365px)
-{
-    .nav-link {
-        width: 100%;
-    }
-}
-
 .main {
     height: auto;
     min-height: 85vh;
@@ -120,6 +95,8 @@ body {
 #hidden-title {
     display: none;
 }
+
+
 
 
 
@@ -236,7 +213,48 @@ body {
 
 /****** Media Queries ******/
 
-/*Medium Screen Size*/
+/* Make Nav Bar vertical on small screens */
+@media screen and (max-width: 365px)
+{
+    #navbar {
+        transition: .2s ease-out;
+        transition-property: height;
+        height: 150px;
+    }
+}
+@media screen and (max-width: 365px)
+{
+    .nav-link {
+        width: 100%;
+    }
+}
+
+/* Reduce title size and hide title graphic on small screens */
+@media screen and (max-width: 480px)
+{
+    #circle {
+        display: none;
+    } 
+
+     #hidden-title, #hidden-title h1 {
+        text-align: center; 
+        display: block;
+        font-size: 150px;
+        margin: 0 auto;
+    }    
+
+    #hidden-title p{
+        font-size: 30px;
+        font-variant: small-caps;
+        margin: 0 auto;
+    }
+
+    .title {
+        display: none;
+    } 
+}
+
+/* Change title and title graphic size on medium screens */
 @media screen and (min-width: 800px)
 {
     #circle {
@@ -252,7 +270,6 @@ body {
         transition-property: font-size;
     }
 }
-
 @media screen and (max-width: 800px)
 {
     #circle {
@@ -266,44 +283,5 @@ body {
         font-size: 80px;
         transition: .2s ease-out;
         transition-property: font-size;
-    }
-}
-
-/*Small Screen Size*/
-@media screen and (min-width: 435px)
-{
-    #circle {
-        display: flex;
-        transition: .2s ease-out;
-        transition-property: display;
-    }
-}
-
-@media screen and (max-width: 435px)
-{
-    .main {
-        padding: 0;
-        background: linear-gradient(to bottom, white 0%, yellow 100%);
-    }
-    
-    #circle {
-        display: none;
-    }
-
-    #hidden-title, #hidden-title h1 {
-        text-align: center; 
-        display: block;
-        font-size: 150px;
-        margin: 0 auto;
-    }    
-
-    #hidden-title p{
-        font-size: 30px;
-        font-variant: small-caps;
-        margin: 0 auto;
-    }
-
-    .title {
-        display: none;
     }
 }
