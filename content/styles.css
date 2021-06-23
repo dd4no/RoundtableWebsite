@@ -179,7 +179,6 @@ body {
     min-width: 200px;
     height: 125px;
     width: auto;
-    /* height: auto; */
     background-color: var(--maincolor);
     overflow: auto;    
 }
@@ -193,7 +192,6 @@ body {
 #result-box {
     background-color: white;
     height: 320px;
-    /* height: auto; */
 }
 
 #clear-btn{
