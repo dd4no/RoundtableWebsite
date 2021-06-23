@@ -177,22 +177,23 @@ body {
     border: 1px solid var(--contrastcolor);
     padding: 10px;
     min-width: 200px;
-    min-height: 125px;
+    height: 125px;
     width: auto;
-    height: auto;
-    background-color: var(--maincolor);    
+    /* height: auto; */
+    background-color: var(--maincolor);
+    overflow: auto;    
 }
 
 #code-box{
     background-color: black;
     color: lime;
-    height: 300px;
+    height: 320px;
 }
 
 #result-box {
     background-color: white;
-    min-height: 300px;
-    height: auto;
+    height: 320px;
+    /* height: auto; */
 }
 
 #clear-btn{
