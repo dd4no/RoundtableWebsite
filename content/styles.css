@@ -130,6 +130,16 @@ body {
 
 
 
+/****** Flashcards Page ******/
+.card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid white;
+    perspective: 1000px;
+}
+
+
 /****** Challenge Page ******/
 
 #selector {
