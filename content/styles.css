@@ -357,6 +357,7 @@ body {
     }
 }
 
+/* Reduce flashcard size on small screens */
 @media screen and (max-width: 315px)
 {
     .card {
@@ -364,7 +365,7 @@ body {
         height: 100px;
     }
 }
-
+/* Hide flashcard for tiny screens */
 @media screen and (max-width: 200px)
 {
     .card {
