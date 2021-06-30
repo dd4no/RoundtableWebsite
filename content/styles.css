@@ -356,3 +356,18 @@ body {
         float: none;
     }
 }
+
+@media screen and (max-width: 315px)
+{
+    .card {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 200px)
+{
+    .card {
+        display: none;
+    }
+}
